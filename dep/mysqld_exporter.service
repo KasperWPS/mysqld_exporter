@@ -7,7 +7,7 @@ After=network-online.target
 [Service]
 Restart=on-failure
 User=root
-EnvironmentFile=/etc/default/prometheus-mysqld-exporter
+EnvironmentFile=/etc/default/mysqld_exporter
 ExecStart=/usr/bin/mysqld_exporter $ARGS
 ExecReload=/bin/kill -HUP $MAINPID
 TimeoutStopSec=20s
